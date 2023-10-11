@@ -1,6 +1,6 @@
 # zcamt2csv
 Petit utilitaire pour convertir des fichier XML CAMT 053 de la Banque Alternative Suisse en CSV
-zf231011.2257, 231011.2300
+zf231011.2257, 231011.2330
 
 
 ## Buts
@@ -34,6 +34,9 @@ https://github.com/viafintech/camt_parser/blob/master/lib/camt_parser/general/tr
 
 ## Sources
 https://github.com/viafintech/camt_parser
+https://stackoverflow.com/questions/50804957/parse-a-xml-uploaded-with-camt-parser-rails-gem
+https://github.com/plumped/camt_converter_ISO20022_for_camt
+https://hub.docker.com/_/ruby
 
 
 
