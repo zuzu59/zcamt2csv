@@ -1,4 +1,6 @@
 CAMT053*.xml
+__MACOSX/
+.DS_Store
 
 *.gem
 *.rbc

@@ -1,0 +1,13 @@
+version: '3.3'
+#name: zuzubank
+
+services:
+  zuzubank:
+    build: .
+
+    # mount app dir for development only
+    volumes:
+      - ./app:/app
+    ports:
+      - "4567:4567"
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Zuzu bank file parser</title>
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+	<div class="max-w-md mx-auto bg-white rounded p-8 shadow-md">
+		<h1 class="text-2xl font-bold mb-4">Camt to CSV</h1>
+		<p>
+			Select the camt format xml file from bank. Then click the <em>Upload</em> button. The same data in csv format should be downloaded to your computer
+		</p>
+
+		<form action="/" method="post" enctype="multipart/form-data">
+			<div class="mb-4">
+<!-- 				<label for="file" class="block text-gray-600 text-sm font-medium mb-2">
+					Select your file 
+				</label>
+ -->				<input type="file" name="file" id="file" class="border rounded p-2 w-full">
+			</div>
+
+			<button type="submit" class="bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+				Upload
+			</button>
+		</form>
+	</div>
+</body>
+</html>

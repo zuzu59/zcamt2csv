@@ -1,0 +1,25 @@
+version: '3.3'
+#name: zuzubank
+
+services:
+  zuzubank:
+    build: .
+
+    # mount app dir for development only
+    volumes:
+      - ./app:/app
+
+    # labels and network are for giovanni's traefik setup 
+    # see https://github.com/multiscan/dev_traefik
+    labels:
+      - traefik.docker.network=traefik
+      - traefik.http.services.zuzubank.loadbalancer.server.port=4567
+      - traefik.http.routers.zuzubank.rule=Host("zuzubank.dev.jkldsa.com")
+      - traefik.http.routers.zuzubank.tls=true
+    networks:
+      - traefik
+      - default
+
+networks:
+  traefik:
+    external: true
