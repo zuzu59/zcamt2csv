@@ -1,6 +1,6 @@
 # zcamt2csv
 Petit utilitaire pour convertir des fichiers XML CAMT 053 de la Banque Alternative Suisse (BAS) en CSV
-zf231011.2257, 231013.2258
+zf231011.2257, 231013.2300
 
 
 ## Buts
@@ -18,7 +18,6 @@ Il faut que Docker tourne sur sa machine !
 
 
 ## Utilisation
-
 Faire simplement:
   ```
   ./start.sh
@@ -26,6 +25,15 @@ Faire simplement:
 
 Après on peut simplement ouvrir avec son browser:
 http://localhost:4567
+
+
+## Pour le redémarer
+Quand on modifie le fichier *app/app.rb*, il va falloir redémarer le container pour que la modification soit prise en compte.<br>
+On le fait simplement avec:
+  ```
+  ./restart.sh
+  ```
+
 
 ## Pour arrêter !
 Simplement faire:
