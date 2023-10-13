@@ -18,17 +18,18 @@ post '/' do
   puts camt.group_header.creation_date_time
 
   csv_string = CSV.generate do |csv|
-    csv << ["id", "debit", "value_date", "iban", "deb iban", "description", "details"]
+    csv << ["date", "montant", "signe", "libelle", "communication", "reference", "nom", "IBAN", "154610"]
     camt.statements.each do |statement|
       statement.entries.each do |entry|
         csv << [
-          entry.transactions[0].transaction_id,
-          entry.debit,
           entry.value_date,
-          entry.transactions[0].iban,
-          entry.transactions[0].debitor.iban,
-          entry.description,
+          entry.amount,
+          entry.sign,
+          entry.additional_information,
           entry.transactions[0].remittance_information,
+          entry.transactions[0].transaction_id,
+          entry.transactions[0].name,
+          entry.transactions[0].iban,
         ]
       end
     end
