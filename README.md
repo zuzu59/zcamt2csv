@@ -1,6 +1,6 @@
 # zcamt2csv
 Petit utilitaire pour convertir des fichiers XML CAMT 053 de la Banque Alternative Suisse (BAS) en CSV
-zf231011.2257, 231013.2250
+zf231011.2257, 231013.2258
 
 
 ## Buts
@@ -10,6 +10,7 @@ Le seul moyen de les avoir, c'est de récupérer l'exportation en format XML/CAM
 Mais ce format est tellement pourri (encore une fois) que les convertisseurs XML/CSV standards ne fonctionnent pas ou alors très mal.
 Le but donc de ce petit utilitaire est d'extraire les colonnes désirées du fichier XML pour les convertir en CSV.
 La seule lib que j'ai trouvée qui est utilisable et surtout facile à choisir ce que l'on veut comme colonnes est une lib en Ruby.
+
 Afin de simplifier au maximum l'utilisation de cet utilitaire par le secrétaire, j'en ai fait un petit service WEB (Un GRAND merci à https://github.com/multiscan). 
 
 ## Prérequis
