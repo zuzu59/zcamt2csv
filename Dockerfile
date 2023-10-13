@@ -1,13 +1,17 @@
-#FROM ruby:3.1-bookworm
-FROM ruby:3.0
+#zf231013.2231
+#FROM ruby:3.0
+
+# En prenant une image 'slim' on gagne 500MB sur le disque !
+FROM ruby:3.0.6-slim
 
 ENV APP_HOME /app
 ENV LANG=C.UTF-8
 ENV BUNDLE_JOBS=4
 ENV BUNDLE_RETRY=3
 
-# RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
-#     build-essential \
+# Il faut installer le compilateur quand on utilise une image slim ! (zf231013.2227
+RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
+     build-essential
 #     gnupg2 \
 #     less \
 #     libpq-dev \

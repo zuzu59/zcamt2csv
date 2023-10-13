@@ -18,7 +18,7 @@ post '/' do
   puts camt.group_header.creation_date_time
 
   csv_string = CSV.generate do |csv|
-    csv << ["date", "montant", "signe", "libelle", "communication", "reference", "nom", "IBAN", "154610"]
+    csv << ["date", "montant", "signe", "libelle", "communication", "reference", "nom", "IBAN", "224351"]
     camt.statements.each do |statement|
       statement.entries.each do |entry|
         csv << [

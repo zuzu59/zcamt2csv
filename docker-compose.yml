@@ -1,11 +1,10 @@
 version: '3.3'
-#name: zuzubank
+#zf231013.2153
 
 services:
   zuzubank:
     build: .
-
-    # mount app dir for development only
+    restart: always
     volumes:
       - ./app:/app
     ports:
