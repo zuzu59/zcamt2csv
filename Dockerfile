@@ -11,7 +11,8 @@ ENV BUNDLE_RETRY=3
 
 # Il faut installer le compilateur quand on utilise une image slim ! (zf231013.2227
 RUN apt-get update -qq && apt-get install -yq --no-install-recommends \
-     build-essential
+     build-essential \
+     git
 #     gnupg2 \
 #     less \
 #     libpq-dev \
@@ -30,7 +31,11 @@ RUN mkdir -p $APP_HOME
 
 WORKDIR $APP_HOME
 ADD ./app/Gemfile* $APP_HOME/
+
+RUN bundle config set frozen false
+
 RUN bundle install
+
 RUN ls -l $APP_HOME
 
 ADD entrypoint.sh /bin/entrypoint.sh

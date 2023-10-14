@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/viafintech/camt_parser
+  revision: ebfb450e2487f94923fb501e0e9b9028cf8ab725
+  branch: feature/64-add-postal-address-support
+  specs:
+    camt_parser (2.16.0)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,8 +24,6 @@ GEM
     camt (1.0.0)
       activesupport
       nokogiri
-    camt_parser (2.15.1)
-      nokogiri
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     drb (2.1.1)
@@ -29,8 +35,6 @@ GEM
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.1.2)
     nio4r (2.5.9)
-    nokogiri (1.15.4-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     puma (6.4.0)
@@ -50,14 +54,13 @@ GEM
       concurrent-ruby (~> 1.0)
 
 PLATFORMS
-  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   camt (~> 1.0)
-  camt_parser (~> 2.15)
+  camt_parser!
   puma (~> 6.4)
   sinatra (~> 3.1)
 
 BUNDLED WITH
-   2.4.19
+   2.4.20

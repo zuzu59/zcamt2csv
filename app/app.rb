@@ -1,3 +1,5 @@
+#zf231016.0012
+
 require 'sinatra'
 require 'fileutils'
 
@@ -27,6 +29,8 @@ post '/' do
           entry.sign,
           entry.additional_information,
           entry.transactions[0].remittance_information,
+#          entry.transactions[0].postal_address.lines,
+          entry.postal_address[0].lines,
           entry.transactions[0].transaction_id,
           entry.transactions[0].name,
           entry.transactions[0].iban,
