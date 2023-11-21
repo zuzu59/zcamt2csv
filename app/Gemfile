@@ -5,5 +5,5 @@ gem "puma", "~> 6.4"
 gem 'sinatra', '~> 3.1'
 gem "camt", "~> 1.0"
 
-#gem "camt_parser", "~> 2.15"
-gem 'camt_parser', git: 'https://github.com/viafintech/camt_parser', branch: 'feature/64-add-postal-address-support'
+gem "camt_parser", "~> 2.16"
+#gem 'camt_parser', git: 'https://github.com/viafintech/camt_parser', branch: 'feature/64-add-postal-address-support'
