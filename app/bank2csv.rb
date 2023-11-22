@@ -25,7 +25,7 @@ def bank2csv(filename)
         end
         csv << [
           entry.value_date,
-          entry.amount,
+          entry.amount.to_f,
           entry.sign,
           entry.additional_information,
           ft ? ft.remittance_information : "NA",
