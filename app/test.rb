@@ -1,6 +1,10 @@
-require './bank2csv.rb'
+require 'yaml'
+require "./#{File.dirname(__FILE__)}/bank2csv.rb"
 
-tempfile="test.xml"
-csv_string = bank2csv(tempfile)
+fn=ARGV.first
 
-puts csv_string
+xmlfile = fn+".xml"
+xmlfile = "test/real/#{fn}.xml" unless File.exists?(xmlfile)
+
+puts bank2csv(xmlfile)
+# puts bank2yaml(xmlfile)
