@@ -1,4 +1,5 @@
 CAMT053*.xml
+app/*.xml
 __MACOSX/
 .DS_Store
 
