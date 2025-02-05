@@ -90,16 +90,16 @@ end
 
 def bank2csv(filename)
   csv_string = CSV.generate do |csv|
-    csv << ["date", "montant", "signe", "libelle", "communication", "reference", "nom", "adresse", "IBAN", "231016.175318"]
+    csv << ["date", "nom", "communication", "reference", "montant", "signe", "libelle", "adresse", "IBAN", "231024.163827"]
     ZTransaction.parse_camt(filename).each do |t|
       csv << [
         t.value_date,
+        t.name,
+        t.communication,
+        t.reference,
         t.amount,
         t.sign,
         t.info,
-        t.communication,
-        t.reference,
-        t.name,
         t.address,
         t.iban,
       ]
